@@ -1,0 +1,365 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root{
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--Almost-White);
+    font-family: "Epilogue", sans-serif;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.5rem;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.logo-cont{
+    display: flex;
+    margin-top: .5rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--Medium-Gray);
+    font-weight: 500;
+    transition: .3s ease-in-out;
+}
+
+a:hover{
+    color: var(--Almost-Black);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-self: start;
+}
+
+.menu{
+    display: none;
+}
+
+.nav-links{
+    display: flex;
+    gap: 3rem;
+    position: relative;
+    align-items: center;
+}
+
+.links{
+    display: flex;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.Features, .Company{
+    position: relative;
+}
+
+.up{
+    display: none;
+}
+
+.drop{
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0,0.2);
+    width: 100%;
+    position: absolute;
+    width: max-content;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: .5rem;
+    top: 200%;
+    display: none;
+}
+
+.none{
+    display: none;
+}
+
+.display{
+    display: flex;
+}
+
+.drop span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin: 0;
+}
+
+.f-d>span>p{
+    margin: .7rem;
+}
+
+.c-d>p{
+    margin: .7rem;
+}
+
+.f-d{
+    right: 0%;
+}
+
+.nav-cta{
+    gap: 2.5rem;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Almost-White);
+}
+
+.nav-cta>button{
+    box-sizing: border-box;
+    padding: .7rem 1.5rem;
+    border: solid 2px var(--Almost-Black);
+    background-color: var(--Almost-White);
+    border-radius: .5rem;
+    color: var(--Medium-Gray);
+}
+
+.nav-cta>button:hover{
+    color: var(--Almost-Black);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+main{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 10rem;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    width: 50%;
+    padding-right: 5rem;
+    box-sizing: border-box;
+}
+
+.info h1{
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.info p{
+    padding-right: 2rem;
+}
+
+.info button{
+    width: max-content;
+    box-sizing: border-box;
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+    padding: .7rem 1.5rem;
+    border-radius: .5rem;
+    margin-top: 2.5rem;
+}
+
+.info button:hover{
+    background-color: var(--Almost-White);
+    color: #000;
+    font-weight: 800;
+    border: solid 2px var(--Almost-Black);
+    cursor: pointer;
+}
+
+.row{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.row img{
+    width: 20%;
+}
+
+.hero{
+    width: 40%;
+}
+
+.hero img{
+    width: 100%;
+}
+
+.mobile{
+    display: none;
+}
+
+footer{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+footer>span{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media(max-width:768px){
+
+    header{
+        justify-content: space-between;
+        height: auto;
+    }
+
+    nav {
+        display: none;
+        position: fixed;
+        background-color: var(--Almost-White);
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        width: 70%;
+        box-shadow: -90px 0px 0px 10px rgba(0, 0, 0, 0.2);
+        right: 0;
+        top: 0;
+        bottom: 0; /* This ensures the navigation covers the entire height of the viewport */
+        box-sizing: border-box;
+        padding: 0 2rem;
+        height: 100vh;
+        transition: 0.3s ease;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 4.5rem;
+        align-items: flex-start;
+        max-height: 26rem;
+        top: 4.5rem;
+    }
+
+    .up, .down{
+        position: relative;
+        margin-left: auto;
+        left: 1.5rem;
+    }
+
+    .drop{
+        box-shadow: none;
+        position: relative;
+        left: 0rem;
+        background-color: var(--Almost-White);
+        top: 0;
+    }
+
+    
+    .nav-links a {
+        margin-bottom: 1rem; /* Adjust the spacing between nav links */
+    }
+    
+    .nav-cta {
+        margin-bottom: 0;
+        margin-top: 0;
+        gap: 1rem;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-cta>button{
+        width: 100%;
+    }
+    
+
+    .menu{
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main{
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .info{
+        margin-top: auto;
+        width: 100%;
+        padding-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .info h1{
+        margin: 0;
+    }
+    
+    .info p{
+        padding-right: 0;
+    }
+    
+    .info button{
+        margin-top: 2rem;
+    }
+
+    .hero{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero img{
+        width: 90%;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: unset;
+    }
+
+    .row{
+        width: 90%;
+    }
+}
+
+@media(max-width:425px){
+    
+    header{
+        padding: 1.5rem;
+        position: relative;
+    }
+
+    .info{
+        padding: 2rem;
+    }
+
+    .info h1{
+        font-size: 1.9rem;
+    }
+
+    footer>span{
+        gap: .5rem;
+    }
+}
